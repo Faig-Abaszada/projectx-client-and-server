@@ -30,19 +30,25 @@ const Navbar = () => {
                                     to="/"
                                     className={linkClass}
                                 >
-                                    Home
+                                    Resumes
                                 </NavLink>
                                 <NavLink
                                     to="/jobs"
                                     className={linkClass}
                                 >
-                                    Jobs
+                                    Resources
                                 </NavLink>
                                 <NavLink
                                     to="/add-job"
                                     className={linkClass}
                                 >
-                                    Add Job
+                                    Build My Resume
+                                </NavLink>
+                                <NavLink
+                                    to="/add-job"
+                                    className={linkClass}
+                                >
+                                    Login
                                 </NavLink>
                             </div>
                         </div>
