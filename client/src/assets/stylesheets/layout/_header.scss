@@ -1,3 +1,27 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+.site-header {
+    display: flex;
+    align-items: center;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .navigation-area {
+            a {
+                margin-right: 20px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: black;
+                    color: white;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

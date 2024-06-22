@@ -1,62 +1,42 @@
 import { NavLink } from 'react-router-dom'
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/resume-genius-logo.svg'
 
 
 const Navbar = () => {
-    const linkClass = ({ isActive }: { isActive: boolean }) => isActive ?
-        'bg-black text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2' :
-        'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+    // const linkClass = ({ isActive }: { isActive: boolean }) => isActive ?
+    //     'bg-black text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2' :
+    //     'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
 
     return (
-        <header>
-            <nav className="bg-milkpunch border-b border-indigo-500">
-                <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                    <div className="flex h-20 items-center justify-between">
-                        <div
-                            className="flex flex-1 items-center justify-center md:items-stretch md:justify-start"
-                        >
-                            {/* <!-- Logo --> */}
-                            <NavLink className="flex flex-shrink-0 items-center mr-4" to="/">
-                                <img
-                                    className="h-10 w-auto"
-                                    src={logo}
-                                    alt="React Jobs"
-                                />
-                                <span className="hidden md:block text-white text-2xl font-bold ml-2"
-                                >React Jobs</span>
-                            </NavLink>
-                            <div className="md:ml-auto">
-                                <div className="flex space-x-2">
-                                    <NavLink
-                                        to="/"
-                                        className={linkClass}
-                                    >
-                                        Resumes
-                                    </NavLink>
-                                    <NavLink
-                                        to="/jobs"
-                                        className={linkClass}
-                                    >
-                                        Resources
-                                    </NavLink>
-                                    <NavLink
-                                        to="/add-job"
-                                        className={linkClass}
-                                    >
-                                        Build My Resume
-                                    </NavLink>
-                                    <NavLink
-                                        to="/add-job"
-                                        className={linkClass}
-                                    >
-                                        Login
-                                    </NavLink>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <header className='site-header'>
+            <div className="container">
+                <div className="logo-area">
+                    <NavLink to="/">
+                        <img
+                            src={logo}
+                            alt="Site Logo"
+                        />
+                        <span className="a"
+                        >cvcreator</span>
+                    </NavLink>
                 </div>
-            </nav>
+                <div className="navigation-area">
+                    <nav>
+                        <NavLink to="/">
+                            Resumes
+                        </NavLink>
+                        <NavLink to="/jobs">
+                            Resources
+                        </NavLink>
+                        <NavLink to="/add-job">
+                            Build My Resume
+                        </NavLink>
+                        <NavLink to="/add-job">
+                            Login
+                        </NavLink>
+                    </nav>
+                </div>
+            </div>
         </header>
     )
 }
