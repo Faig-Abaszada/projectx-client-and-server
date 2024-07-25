@@ -23,7 +23,7 @@ const Navbar = () => {
                 <div className="navigation-area">
                     <nav>
                         <NavLink to="/">
-                            Resumes
+                            Resumes Home
                         </NavLink>
                         <NavLink to="/jobs">
                             Resources
